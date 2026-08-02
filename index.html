@@ -1031,91 +1031,42 @@
     
     <!-- FLOATING WHATSAPP BUTTONS -->
     <div class="whatsapp-buttons">
-        <a href="#" id="whatsapp-1" class="whatsapp-btn" onclick="redirectWhatsApp(1); return false;" title="Numéro 1">
-            <span>💬</span>
-            <div class="whatsapp-label">Réserver</div>
-        </a>
-        <a href="#" id="whatsapp-2" class="whatsapp-btn" onclick="redirectWhatsApp(2); return false;" title="Numéro 2">
-            <span>📞</span>
-            <div class="whatsapp-label">Appeler</div>
-        </a>
-    </div>
-    
-    <script>
-        // Google Calendar Pop-up Trigger
-        function openCalendarPopup() {
+    <a href="#" id="whatsapp-1" class="whatsapp-btn" onclick="redirectWhatsApp(1); return false;" title="Numéro 1">
+        <span>💬</span>
+        <div class="whatsapp-label">Réserver</div>
+    </a>
+    <a href="#" id="whatsapp-2" class="whatsapp-btn" onclick="redirectWhatsApp(2); return false;" title="Numéro 2">
+        <span>📞</span>
+        <div class="whatsapp-label">Appeler</div>
+    </a>
+</div>
+
+<!-- Scripts Google Calendar -->
+<link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+
+<!-- Script JS -->
+<script>
+    function openCalendarPopup() {
+        if (typeof Calendar !== 'undefined' && Calendar.schedulingButton) {
             Calendar.schedulingButton.loadAppointmentPopup({
                 url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0P2pz3JpSNNeMDgVsMhouqIq0sEODpNAIOmBTXkn2aB1fLCdp1icYH__4-T9rdkv69tk-Js1ce?gv=true'
             });
+        } else {
+            window.open('https://calendar.google.com/calendar/appointments/schedules/AcZssZ0P2pz3JpSNNeMDgVsMhouqIq0sEODpNAIOmBTXkn2aB1fLCdp1icYH__4-T9rdkv69tk-Js1ce?gv=true', '_blank');
         }
+    }
 
-        // WhatsApp redirection
+    function redirectWhatsApp(num) {
         const whatsappNumbers = {
-            1: '+2290196180493',
-            2: '+2290195075106'
+            1: '2290196180493',
+            2: '2290195075106'
         };
-        
-        const messages = {
-            1: 'Bonjour Valéré, je voudrais réserver une consultation en géomancie astrale. Pouvez-vous me proposer les créneaux disponibles ?',
-            2: 'Bonjour Valéré, j\'aimerais discuter avec vous concernant une consultation personnalisée.'
-        };
-        
-        function redirectWhatsApp(numIndex) {
-            const number = whatsappNumbers[numIndex];
-            const message = encodeURIComponent(messages[numIndex]);
-            const url = `https://wa.me/${number}?text=${message}`;
-            window.open(url, '_blank');
+        const number = whatsappNumbers[num];
+        if (number) {
+            window.open(`https://wa.me/${number}`, '_blank');
         }
-
-        // Mobile Menu Toggle
-        const menuToggle = document.getElementById('menu-toggle');
-        const navLinks = document.getElementById('nav-links');
-
-        menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
-
-        // Close menu when a link is clicked
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                menuToggle.classList.remove('active');
-                navLinks.classList.remove('active');
-            });
-        });
-        
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-        
-        // Intersection Observer for fade-in animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-        
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-        
-        document.querySelectorAll('.service-card, .section-title').forEach(el => {
-            observer.observe(el);
-        });
-    </script>
+    }
+</script>
 </body>
 </html>
