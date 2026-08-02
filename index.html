@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consultations en géomancie astrale par Valéré Tossou - Fusion du Fâ ancestral et de l'astrologie moderne">
+    
+    <!-- Open Graph / Meta Réseaux Sociaux (WhatsApp, Facebook, LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Géomancie Astrale - Consultations Personnalisées | Valéré Tossou">
+    <meta property="og:description" content="Découvrez votre destinée à travers la fusion du Fâ ancestral et de l'astrologie moderne. Consultations sur-mesure depuis Cotonou, Bénin.">
+    <meta property="og:image" content="images/valere-tossou.jpg">
+    <meta property="og:locale" content="fr_FR">
+
+    <title>Géomancie Astrale - Consultations Personnalisées | Valéré Tossou</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%23D4AF8F'>✦</text></svg>">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --gold: #D4AF8F;
+            --deep-blue: #1B3A6F;
+            --black: #0D0D0D;
+            --cream: #F5F5F5;
+            --burgundy: #8B2E2E;
+            --light-gray: #E8E8E8;
+            --text-dark: #1a1a1a;
+            --text-light: #666666;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--cream);
+            overflow-x: hidden;
+        }
+        
+        /* ===== HEADER ===== */
+        header {
+            background: linear-gradient(135deg, var(--deep-blue) 0%, rgba(27, 58, 111, 0.95) 100%);
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 15px rgba(13, 13, 13, 0.1);
+        }
+        
+        header nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--gold);
+            text-decoration: none;
+            letter-spacing: 1px;
+            z-index: 101;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--gold);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Menu Hamburger Mobile */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 101;
+        }
+
+        .menu-toggle span {
+            width: 100%;
+            height: 3px;
+            background-color: var(--gold);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+        }
+        
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 75%;
+                height: 100vh;
+                background-color: var(--deep-blue);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 40px;
+                transition: right 0.4s ease;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links a {
+                font-size: 18px;
+            }
+        }
+        
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(135deg, var(--deep-blue) 0%, #2d5a9d 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(212, 175, 143, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(212, 175, 143, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .hero-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--gold);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hero-text p {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: rgba(255, 255, 255, 0.95);
+            font-weight: 300;
+        }
+        
+        .hero-highlight {
+            display: inline-block;
+            background-color: var(--gold);
+            color: var(--deep-blue);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        
+        .hero-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .hero-image img {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            border: 5px solid var(--gold);
+            box-shadow: 0 10px 40px rgba(212, 175, 143, 0.3);
+            object-fit: cover;
+            animation: float 6s ease-in-out infinite;
+            background-color: var(--gold);
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .hero-text h1 {
+                font-size: 42px;
+            }
+            
+            .hero-image img {
+                width: 280px;
+                height: 280px;
+            }
+        }
+        
+        /* ===== SECTION ABOUT ===== */
+        .about {
+            padding: 80px 20px;
+            background-color: white;
+            border-top: 3px solid var(--gold);
+        }
+        
+        .about-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--deep-blue);
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 20px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--gold);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+        
+        .about-text p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+        
+        .about-highlights {
+            background-color: var(--cream);
+            padding: 30px;
+            border-left: 4px solid var(--gold);
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        
+        .about-highlights h3 {
+            color: var(--deep-blue);
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .highlight-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        .highlight-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+        
+        .highlight-item strong {
+            color: var(--burgundy);
+        }
+        
+        .book-section {
+            background: linear-gradient(135deg, var(--gold) 0%, #c9a060 100%);
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 30px;
+            text-align: center;
+            color: var(--black);
+        }
+        
+        .book-section h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        .book-section p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--black);
+            margin-bottom: 15px;
+        }
+        
+        .book-link {
+            display: inline-block;
+            background-color: var(--deep-blue);
+            color: var(--gold);
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .book-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(13, 13, 13, 0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 36px;
+            }
+        }
+        
+        /* ===== SERVICES SECTION ===== */
+        .services {
+            padding: 80px 20px;
+            background-color: var(--cream);
+        }
+        
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid var(--gold);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(212, 175, 143, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(27, 58, 111, 0.15);
+        }
+        
+        .service-duration {
+            display: inline-block;
+            background-color: var(--gold);
+            color: var(--deep-blue);
+            padding: 6px 16px;
+            border-radius: 25px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .service-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            color: var(--deep-blue);
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .service-card p {
+            font-size: 15px;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .service-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--burgundy);
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .service-details {
+            background-color: var(--cream);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            font-size: 14px;
+            color: var(--text-dark);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .service-details ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .service-details li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .service-details li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--burgundy) 0%, #a83a3a 100%);
+            color: white;
+            padding: 14px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(139, 46, 46, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-card h3 {
+                font-size: 28px;
+            }
+            
+            .service-price {
+                font-size: 42px;
+            }
+        }
+        
+        /* ===== CALENDAR SECTION ===== */
+        .calendar-section {
+            padding: 80px 20px;
+            background-color: white;
+            border-top: 3px solid var(--gold);
+        }
+        
+        .calendar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .calendar-intro {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .calendar-intro p {
+            font-size: 18px;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 20px auto 0;
+        }
+        
+        .calendar-embed {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+            height: 700px;
+        }
+        
+        .calendar-embed iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .timezone-note {
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            background-color: var(--cream);
+            border-radius: 8px;
+            font-size: 14px;
+            color: var(--text-light);
+        }
+        
+        .timezone-note strong {
+            color: var(--deep-blue);
+        }
+        
+        @media (max-width: 768px) {
+            .calendar-embed {
+                height: 500px;
+            }
+        }
+        
+        /* ===== CONDITIONS SECTION ===== */
+        .conditions {
+            padding: 60px 20px;
+            background-color: var(--cream);
+        }
+        
+        .conditions-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .conditions-content {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .conditions-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: var(--deep-blue);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .conditions-content h3:first-child {
+            margin-top: 0;
+        }
+        
+        .conditions-content ul,
+        .conditions-content ol {
+            margin-left: 20px;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+        
+        .conditions-content li {
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+        
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: var(--black);
+            color: white;
+            padding: 50px 20px 30px;
+            text-align: center;
+            border-top: 3px solid var(--gold);
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--gold);
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        
+        .footer-section p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        @media (max-width: 768px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+        
+        /* ===== FLOATING WHATSAPP BUTTON ===== */
+        .whatsapp-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .whatsapp-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            font-size: 28px;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+        }
+        
+        .whatsapp-label {
+            position: absolute;
+            right: 80px;
+            background: var(--deep-blue);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateX(10px);
+            pointer-events: none;
+            transition: opacity 0.3s, transform 0.3s;
+        }
+        
+        .whatsapp-btn:hover .whatsapp-label {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        @media (max-width: 768px) {
+            .whatsapp-buttons {
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .whatsapp-label {
+                display: none;
+            }
+        }
+        
+        /* ===== UTILITIES ===== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ===== ANIMATIONS ===== */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+        
+        /* Fade in on scroll */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <a href="#" class="logo">✦ GÉOMANCIE ASTRALE</a>
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#calendar">Réserver</a></li>
+                <li><a href="#conditions">Conditions</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Découvrez votre destinée</h1>
+                <p>à travers le <strong>Fâ ancestral</strong> et l'<strong>astrologie moderne</strong></p>
+                <div class="hero-highlight">Consultations personnalisées depuis Cotonou, Bénin</div>
+            </div>
+            <div class="hero-image">
+                <img src="images/valere-tossou.jpg" alt="Photo de Valéré Tossou" id="hero-photo">
+            </div>
+        </div>
+    </section>
+    
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <h2 class="section-title">À propos de Valéré</h2>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Je suis <strong>Valéré Tossou</strong>, praticien en géomancie astrale basé à Cotonou, Bénin. Je combine les anciennes sagesses du <strong>Fâ</strong>, système divinatoire africain ancestral, avec l'<strong>astrologie moderne</strong> pour offrir des consultations profondément personnalisées.</p>
+                    
+                    <p>Chaque lecture est une exploration unique de votre chemin de vie, de vos défis actuels et de vos potentiels cachés. Mon approche est <strong>bienveillante, confidentielle et centrée sur votre bien-être</strong>.</p>
+                    
+                    <p>Que vous cherchiez des réponses à des questions précises ou une compréhension globale de votre destinée, je suis là pour vous éclairer.</p>
+                </div>
+                
+                <div>
+                    <div class="about-highlights">
+                        <h3>Mes expertises</h3>
+                        <div class="highlight-item">
+                            <strong>Géomancie Fâ</strong><br>
+                            Sagesse divinatoire ancestrale africaine
+                        </div>
+                        <div class="highlight-item">
+                            <strong>Astrologie Moderne</strong><br>
+                            Analyse de votre carte natale et transits
+                        </div>
+                        <div class="highlight-item">
+                            <strong>Guidance Holistique</strong><br>
+                            Conseils pratiques et sagesse spirituelle
+                        </div>
+                    </div>
+                    
+                    <div class="book-section">
+                        <h4>📖 Découvrez mon ouvrage</h4>
+                        <p><strong>"Méditation sur la vie de l'homme et son langage"</strong></p>
+                        <p>Explorez une réflexion profonde sur la destinée et le sens de l'existence.</p>
+                        <a href="https://precieux6.github.io/meditation-destin-homme/" target="_blank" class="book-link">Lire l'extrait gratuit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SERVICES SECTION -->
+    <section class="services" id="services">
+        <div class="services-container">
+            <h2 class="section-title">Types de Consultations</h2>
+            
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-duration">60 minutes</div>
+                    <h3>Consultation Standard</h3>
+                    <p>Analyse personnalisée combinant la géomancie Fâ et votre profil astrologique complet.</p>
+                    <div class="service-price">5 000 FCFA</div>
+                    <div class="service-details">
+                        <ul>
+                            <li>Lecture Fâ personnalisée</li>
+                            <li>Analyse astrologique détaillée</li>
+                            <li>Consultations par notes vocales WhatsApp</li>
+                            <li>Sessions questions-réponses incluses</li>
+                            <li>Conseils et recommandations</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="cta-btn" onclick="redirectWhatsApp(1); return false;">Réserver maintenant</a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-duration">90 minutes</div>
+                    <h3>Consultation Approfondie</h3>
+                    <p>Étude complète de votre destinée avec cadeau spécial : astuce, remède, recette ou conseil transformateur.</p>
+                    <div class="service-price">8 000 FCFA</div>
+                    <div class="service-details">
+                        <ul>
+                            <li>Analyse Fâ + astrologie complète</li>
+                            <li>Étude approfondie de votre chemin</li>
+                            <li>Notes vocales + appels WhatsApp/Signal</li>
+                            <li>Sessions Q&R illimitées</li>
+                            <li>✨ Cadeau spécial (astuce, remède, recette)</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="cta-btn" onclick="redirectWhatsApp(2); return false;">Réserver maintenant</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CALENDAR SECTION -->
+    <section class="calendar-section" id="calendar">
+        <div class="calendar-container">
+            <div class="calendar-intro">
+                <h2 class="section-title">Choisissez votre créneau</h2>
+                <p>Consultez le calendrier des disponibilités et sélectionnez une date et heure qui vous convient.</p>
+            </div>
+            
+            <div class="calendar-embed">
+                <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Africa%2FPorto-Novo&src=ccb462b456f50a5e33d988d8584050eff3fa9bab1fb06d77239b8d8d0c600414%40group.calendar.google.com&color=%23D4AF8F" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+            </div>
+            
+            <div class="timezone-note">
+                📍 <strong>Fuseau horaire : Afrique/Porto-Novo (GMT+1)</strong> — Cotonou, Bénin
+            </div>
+        </div>
+    </section>
+    
+    <!-- CONDITIONS SECTION -->
+    <section class="conditions" id="conditions">
+        <div class="conditions-container">
+            <h2 class="section-title">Conditions de Réservation</h2>
+            
+            <div class="conditions-content">
+                <h3>Politique de Réservation</h3>
+                <ul>
+                    <li><strong>Confirmation immédiate :</strong> Après votre message WhatsApp, vous recevrez une confirmation dans les 24 heures.</li>
+                    <li><strong>Modalités de consultation :</strong> Les consultations se déroulent via notes vocales WhatsApp, appels WhatsApp ou Signal.</li>
+                    <li><strong>Paiement :</strong> Le paiement peut s'effectuer via Mobile Money, virement bancaire ou autres moyens convenus avant la consultation.</li>
+                </ul>
+                
+                <h3>Politique d'Annulation & Remboursement</h3>
+                <ul>
+                    <li><strong>Délai d'annulation :</strong> Annulation minimum 48 heures avant la consultation prévue.</li>
+                    <li><strong>Remboursement :</strong> Pas de remboursement en cas d'annulation. Cependant, vous pouvez reprogrammer votre consultation à une date ultérieure sans frais supplémentaires.</li>
+                    <li><strong>Annulation par le consultant :</strong> Si une urgence obligeait le consultant à annuler, vous seriez averti au moins 72 heures à l'avance et une nouvelle date serait proposée immédiatement.</li>
+                </ul>
+                
+                <h3>Confidentialité & Éthique</h3>
+                <ul>
+                    <li>Toutes les consultations sont <strong>strictement confidentielles</strong>.</li>
+                    <li>Les informations partagées durant la consultation ne seront jamais divulguées à des tiers.</li>
+                    <li>L'objectif est votre bien-être et votre développement personnel.</li>
+                </ul>
+                
+                <h3>Conditions Générales</h3>
+                <ul>
+                    <li>Les consultations sont destinées à la guidance spirituelle, non à un remplacement de conseils médicaux ou juridiques.</li>
+                    <li>L'interprétation du Fâ et de l'astrologie est donnée à titre indicatif pour aider à la réflexion personnelle.</li>
+                    <li>Le consultant ne peut être tenu responsable des décisions prises suite aux consultations.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Valéré Tossou</h4>
+                <p>Praticien en Géomancie Astrale<br>Cotonou, Bénin</p>
+                <p>Fusion de la sagesse ancestrale et de l'astrologie moderne pour éclairer votre destinée.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#calendar">Réserver</a></li>
+                    <li><a href="#conditions">Conditions</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Ressources</h4>
+                <ul class="footer-links">
+                    <li><a href="https://precieux6.github.io/meditation-destin-homme/" target="_blank">Mon livre</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Valéré Tossou. Géomancie Astrale - Consultations Personnalisées.<br>Tous droits réservés.</p>
+        </div>
+    </footer>
+    
+    <!-- FLOATING WHATSAPP BUTTONS -->
+    <div class="whatsapp-buttons">
+        <a href="#" id="whatsapp-1" class="whatsapp-btn" onclick="redirectWhatsApp(1); return false;" title="Numéro 1">
+            <span>💬</span>
+            <div class="whatsapp-label">Réserver</div>
+        </a>
+        <a href="#" id="whatsapp-2" class="whatsapp-btn" onclick="redirectWhatsApp(2); return false;" title="Numéro 2">
+            <span>📞</span>
+            <div class="whatsapp-label">Appeler</div>
+        </a>
+    </div>
+    
+    <script>
+        // WhatsApp redirection
+        const whatsappNumbers = {
+            1: '+2290196180493',
+            2: '+2290195075106'
+        };
+        
+        const messages = {
+            1: 'Bonjour Valéré, je voudrais réserver une consultation en géomancie astrale. Pouvez-vous me proposer les créneaux disponibles ?',
+            2: 'Bonjour Valéré, j\'aimerais discuter avec vous concernant une consultation personnalisée.'
+        };
+        
+        function redirectWhatsApp(numIndex) {
+            const number = whatsappNumbers[numIndex];
+            const message = encodeURIComponent(messages[numIndex]);
+            const url = `https://wa.me/${number}?text=${message}`;
+            window.open(url, '_blank');
+        }
+
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.service-card, .section-title').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
